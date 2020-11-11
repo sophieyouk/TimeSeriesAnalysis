@@ -63,7 +63,7 @@ Based on the Figure 6, most of p-values are near the blue line. Hence, the H0 mi
 ## 4. Model Selection
 (d=1)|AR(2)|MA(1)|ARMA(2,1)
 -----|-----|-----|-----
-Est Coeffs|**All significant**|**All significant**|ϕ’s not significant
+Est Coeffs|**All significant**|**All significant**|&phi;’s not significant
 Diagnostics|Ok|Ok|Ok
 AIC|7.206017|**7.113665**|7.127148
 AICc|7.21065|**7.115949**|7.134982
