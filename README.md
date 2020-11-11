@@ -18,7 +18,7 @@ Differenced data in Figure 2 seem to be stationary, so I created ACF and PACF pl
 
 Based on the two plots in Figure 3, I set p=2 and q=1. Then, I fitted plots of AR(2), MA(1), and ARMA(2,1) models using ```sarima()``` function in R.
 
-## 2. Model Estimation & 3. Model Diagnostics
+## 2-3. Model Estimation & Model Diagnostics
 *All data used to fit below models are differenced data (d=1).*
 
 ### a. AR(2) Model
