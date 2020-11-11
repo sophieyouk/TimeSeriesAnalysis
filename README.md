@@ -3,14 +3,18 @@ The data used in this practice are ```cow.dat``` data measuring the daily mornin
 
 <p align="center"><img src="images/cow_data_plots"></p>
 <h4 align="center">Figure 1: Cow Data Plots</h4>
+
 Since the data in Figure 1 are not stationary, I decided to used differenced data (d=1).
 
 <p align="center"><img src="images/dcow_data_plots"></p>
 <h4 align="center">Figure 2: Differenced Cow Data Plots</h4>
+
 Differenced data in Figure 2 seem to be stationary, so I created ACF and PACF plots with differenced data.
+
 </br></br>
 <p align="center"><img src="images/acf_pacf_plots"></p>
 <h4 align="center">Figure 3: ACF and PACF Plots of Differenced Cow Data</h4>
+
 Based on the two plots in Figure 3, I set p=2 and q=1. Then, I fitted plots of AR(2), MA(1), and ARMA(2,1) models using ```sarima()``` function in R.
 
 *All data used to fit below models are differenced data (d=1).*
