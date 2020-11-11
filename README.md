@@ -1,4 +1,5 @@
 # Time Series Analysis - Building ARIMA models
+## 1. Exploratory Data Analysis
 The data used in this practice are ```cow.dat``` data measuring the daily morning temperature readings for a cow.
 
 <p align="center"><img src="images/cow_data_plots"></p>
@@ -11,15 +12,16 @@ Since the data in Figure 1 are not stationary, I decided to used differenced dat
 
 Differenced data in Figure 2 seem to be stationary, so I created ACF and PACF plots with differenced data.
 
-</br></br>
+</br>
 <p align="center"><img src="images/acf_pacf_plots"></p>
 <h4 align="center">Figure 3: ACF and PACF Plots of Differenced Cow Data</h4>
 
 Based on the two plots in Figure 3, I set p=2 and q=1. Then, I fitted plots of AR(2), MA(1), and ARMA(2,1) models using ```sarima()``` function in R.
 
+## 2. Model Estimation & 3. Model Diagnostics
 *All data used to fit below models are differenced data (d=1).*
 
-### AR(2) Model
+### a. AR(2) Model
 <p align="center"><img src="images/ar2"></p>
 <h4 align="center">Figure 4: AR(2) Model of Differenced Cow Data</h4>
 
@@ -32,7 +34,7 @@ xmean   -0.1514   0.4919    -0.3079   0.7591
 
 In Figure 4, most of p-values are near the blue line. Hence, the H<sub>0</sub> might be wrong, and the residuals might not be white. The estimated coefficients are significant.
 
-### MA(1) Model
+### b. MA(1) Model
 <p align="center"><img src="images/ma1"></p>
 <h4 align="center">Figure 5: MA(1) Model of Differenced Cow Data</h4>
 
@@ -44,7 +46,7 @@ xmean   -0.2380   0.1339    -1.7766   0.0799
 
 Based on the Figure 5, most of p-values are above the blue line. Hence, the H<sub>0</sub> might not be wrong, and the residuals were white. The estimated coefficients are significant.
 
-### ARMA(2,1) Model
+### c. ARMA(2,1) Model
 <p align="center"><img src="images/arma21"></p>
 <h4 align="center">Figure 6: ARMA(2,1) Model of Differenced Cow Data</h4>
 
@@ -58,6 +60,7 @@ xmean  -0.2396   0.0597    -4.0150    0.0001
 
 Based on the Figure 6, most of p-values are near the blue line. Hence, the H0 might be wrong, and the residuals might not be white. The estimated values of &phi;'s are not significant.
 
+## 4. Model Selection
 (d=1)|AR(2)|MA(1)|ARMA(2,1)
 -----|-----|-----|-----
 Est Coeffs|**All significant**|**All significant**|ϕ’s not significant
