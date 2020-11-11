@@ -57,3 +57,14 @@ xmean  -0.2396   0.0597    -4.0150    0.0001
 ```
 
 Based on the Figure 6, most of p-values are near the blue line. Hence, the H0 might be wrong, and the residuals might not be white. The estimated values of &phi;'s are not significant.
+
+(d=1)|AR(2)|MA(1)|ARMA(2,1)
+-----|-----|-----|-----
+Est Coeffs|**All significant**|**All significant**|ϕ’s not significant
+Diagnostics|Ok|Ok|Ok
+AIC|7.206017|**7.113665**|7.127148
+AICc|7.21065|**7.115949**|7.134982
+BIC|7.330561|**7.207073**|7.282828
+<h4 align="left">Figure 7: Summary Table</h4>
+
+Based on the Figure 7, I will choose MA(1) model with differenced data or ARIMA(0,1,1) of the original data.
